@@ -1,0 +1,4255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/line1"
+        android:background="#bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+    </View>
+
+    <TextView
+        android:layout_below="@id/line1"
+        android:layout_marginTop="20dp"
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="新型コロナウイルス感染症">
+    </TextView>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/title1"
+        android:id="@+id/line2"
+        android:background="#bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+    </View>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/line2"
+        android:id="@+id/update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/update_time_japan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="最終更新：----.--.-- --:-- (日本時間)"
+            android:layout_weight="1">
+        </TextView>
+
+        <Button
+            android:id="@+id/refresh_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新する"
+            android:layout_weight="3">
+        </Button>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/update_layout"
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="国内の発生状況">
+    </TextView>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/describe1"
+        android:layout_below="@id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="ダイヤモンド・プリンセス号乗員・乗客を除く">
+    </TextView>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/describe1"
+        android:id="@+id/table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="累計感染者数">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_confirm"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="105,078">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_confirm_variation"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="+1,050">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:background="#bdbdbd"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="現在感染者数">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_cur_confirm"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="7,763">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_cur_confirm_variation"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="+615">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:background="#bdbdbd"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="退院者数">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_recovered"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="95,508">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_recovered_variation"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="+426">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:background="#bdbdbd"
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="死亡者数">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_death"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="1,807">
+            </TextView>
+
+            <TextView
+                android:id="@+id/japan_death_variation"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:text="+9">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/table1"
+        android:id="@+id/line3"
+        android:background="#bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+    </View>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/line3"
+        android:id="@+id/title3"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="詳細（47都道府県のみ）">
+    </TextView>
+
+    <ScrollView
+        android:layout_marginVertical="20dp"
+        android:layout_below="@id/title3"
+        android:id="@+id/table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:text="都道府県">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:text="累計">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:text="現在">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:text="退院">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    android:text="死亡">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="北海道">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hokkaidou_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="青森県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aomori_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="岩手県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/iwate_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="宮城県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyagi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="秋田県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/akita_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="山形県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamagata_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="福島県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukusima_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="茨城県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ibaraki_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="栃木県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tochigi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="群馬県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gunma_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="埼玉県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saitama_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="千葉県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/chiba_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="東京都">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toukyou_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="神奈川県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kanagawa_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="新潟県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/niigata_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="富山県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/toyama_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="石川県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/isikawa_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="福井県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukui_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="山梨県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamanasi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="長野県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagano_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="岐阜県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/gifu_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="静岡県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sizuoka_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="愛知県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/aichi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="三重県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mie_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="滋賀県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/siga_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="京都府">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kyouto_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="大阪府">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oosaka_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="兵庫県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hyougo_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="奈良県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nara_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="和歌山県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wakayama_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="鳥取県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tottori_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="島根県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/simane_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="岡山県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okayama_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="広島県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/hirosima_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="山口県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yamaguchi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="徳島県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tokusima_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="香川県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagawa_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="愛媛県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ehime_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="高知県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kouchi_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="福岡県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/fukuoka_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="佐賀県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/saga_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="長崎県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/nagasaki_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="熊本県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kumamoto_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="大分県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ooita_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="宮崎県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/miyazaki_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="鹿児島県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kagosima_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="沖縄県">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_cur_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_recovered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_cur_confirm_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_recovered_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/okinawa_death_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="-">
+                </TextView>
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_below="@id/table2"
+        android:id="@+id/line4"
+        android:background="#bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+    </View>
+
+</RelativeLayout>
