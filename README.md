@@ -4,5 +4,5 @@
 - Platform : Android
 - Language : Kotlin
 
-# update note
+# Update Note
 - v1.1 (2021-01-05) : 웹사이트 html 구조 변경 
