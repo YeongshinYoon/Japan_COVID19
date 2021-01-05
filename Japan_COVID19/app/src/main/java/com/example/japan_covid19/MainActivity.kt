@@ -35,14 +35,24 @@ class MainActivity : AppCompatActivity() {
 
     private fun crawlingData() {
         var doc = Jsoup.connect("https://newsdigest.jp/pages/coronavirus/").maxBodySize(0).get()
-        var elements = doc.select("div.css-g8dn7z div")
 
+        var elements = doc.select("div.css-1kcjzuq span")
         val japan_confirm = findViewById<TextView>(R.id.japan_confirm)
-        japan_confirm.text = insertComma(elements[1].text(), 0)
+        japan_confirm.text = insertComma(elements[0].text(), 0)
+        val japan_cur_confirm = findViewById<TextView>(R.id.japan_cur_confirm)
+        japan_cur_confirm.text = insertComma(elements[3].text(), 0)
+        val japan_recovered = findViewById<TextView>(R.id.japan_recovered)
+        japan_recovered.text = insertComma(elements[1].text(), 0)
+        val japan_death = findViewById<TextView>(R.id.japan_death)
+        japan_death.text = insertComma(elements[2].text(), 0)
+
+        //elements[1] : today
+        //elements[3] : yesterday
+        elements = doc.select("div.css-1qexz48 span")
         val japan_confirm_variation = findViewById<TextView>(R.id.japan_confirm_variation)
-        japan_confirm_variation.text = insertComma(elements[2].text().substring(3, elements[2].text().length), 1)
-        if (elements[2].text().substring(3, 4) == "+") {
-            if (elements[2].text().substring(4, elements[2].text().length).toInt() == 0)
+        japan_confirm_variation.text = insertComma(elements[1].text(), 1)
+        if (elements[1].text().substring(0, 1) == "+") {
+            if (elements[1].text().substring(1, elements[1].text().length).toInt() == 0)
                 japan_confirm_variation.setTextColor(Color.parseColor("#2f9d27"))
             else
                 japan_confirm_variation.setTextColor(Color.parseColor("#ff0000"))
@@ -50,12 +60,11 @@ class MainActivity : AppCompatActivity() {
         else
             japan_confirm_variation.setTextColor(Color.parseColor("#2f9d27"))
 
-        val japan_cur_confirm = findViewById<TextView>(R.id.japan_cur_confirm)
-        japan_cur_confirm.text = insertComma(elements[10].text(), 0)
+        elements = doc.select("div.css-12h61iv span")
         val japan_cur_confirm_variation = findViewById<TextView>(R.id.japan_cur_confirm_variation)
-        japan_cur_confirm_variation.text = insertComma(elements[11].text().substring(3, elements[11].text().length), 1)
-        if (elements[11].text().substring(3, 4) == "+") {
-            if (elements[11].text().substring(4, elements[11].text().length).toInt() == 0)
+        japan_cur_confirm_variation.text = insertComma(elements[9].text(), 1)
+        if (elements[9].text().substring(0, 1) == "+") {
+            if (elements[9].text().substring(1, elements[9].text().length).toInt() == 0)
                 japan_cur_confirm_variation.setTextColor(Color.parseColor("#2f9d27"))
             else
                 japan_cur_confirm_variation.setTextColor(Color.parseColor("#ff0000"))
@@ -63,12 +72,10 @@ class MainActivity : AppCompatActivity() {
         else
             japan_cur_confirm_variation.setTextColor(Color.parseColor("#2f9d27"))
 
-        val japan_recovered = findViewById<TextView>(R.id.japan_recovered)
-        japan_recovered.text = insertComma(elements[4].text(), 0)
         val japan_recovered_variation = findViewById<TextView>(R.id.japan_recovered_variation)
-        japan_recovered_variation.text = insertComma(elements[5].text().substring(3, elements[5].text().length), 1)
-        if (elements[5].text().substring(3, 4) == "+") {
-            if (elements[5].text().substring(4, elements[5].text().length).toInt() == 0)
+        japan_recovered_variation.text = insertComma(elements[1].text(), 1)
+        if (elements[1].text().substring(0, 1) == "+") {
+            if (elements[1].text().substring(1, elements[1].text().length).toInt() == 0)
                 japan_recovered_variation.setTextColor(Color.parseColor("#ff0000"))
             else
                 japan_recovered_variation.setTextColor(Color.parseColor("#2f9d27"))
@@ -76,21 +83,18 @@ class MainActivity : AppCompatActivity() {
         else
             japan_recovered_variation.setTextColor(Color.parseColor("#ff0000"))
 
-        val japan_death = findViewById<TextView>(R.id.japan_death)
-        japan_death.text = insertComma(elements[7].text(), 0)
         val japan_death_variation = findViewById<TextView>(R.id.japan_death_variation)
-        japan_death_variation.text = insertComma(elements[8].text().substring(3, elements[8].text().length), 1)
-        if (elements[8].text().substring(3, 4) == "+") {
-            if (elements[8].text().substring(4, elements[8].text().length).toInt() == 0)
+        japan_death_variation.text = insertComma(elements[5].text(), 1)
+        if (elements[5].text().substring(0, 1) == "+") {
+            if (elements[5].text().substring(1, elements[5].text().length).toInt() == 0)
                 japan_death_variation.setTextColor(Color.parseColor("#2f9d27"))
             else
                 japan_death_variation.setTextColor(Color.parseColor("#ff0000"))
         }
-
         else
             japan_death_variation.setTextColor(Color.parseColor("#2f9d27"))
 
-        elements = doc.select("div.css-kb7nvz")
+        elements = doc.select("div.css-0")
         val update_time_japan: TextView = findViewById(R.id.update_time_japan)
         update_time_japan.text = elements[1].text()
 
